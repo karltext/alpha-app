@@ -6,10 +6,11 @@ public class ServiceConfig extends ResourceConfig {
 	
 	public ServiceConfig() {
 		register(BookingAccessAPI.class);
+		register(TrainAccessAPI.class);
 //		register(FlightAccessAPI.class);
 //		register(AccountAccessAPI.class);
 //		register(HotelAccessAPI.class);
-//		register(TrainAccessAPI.class);
+
 //		register(CustomerAccessAPI.class);
 	}
 
