@@ -1,4 +1,4 @@
-package com.mastek.alpha;
+package com.mastek.alpha.booking;
 
 import javax.websocket.server.PathParam;
 import javax.ws.rs.BeanParam;

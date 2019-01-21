@@ -1,9 +1,9 @@
-package com.mastek.alpha;
+package com.mastek.alpha.flight;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
 
 @Component
-public interface TrainJPARepository extends CrudRepository<Train, Integer>{
+public interface FlightJPARepository extends CrudRepository<Flight, Integer> {
 
 }
