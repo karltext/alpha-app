@@ -8,7 +8,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class AlphaApplication {
 
 	public static void main(String[] args) {
-		System.out.println("Hello world");
 		SpringApplication.run(AlphaApplication.class, args);
 		
 	}
