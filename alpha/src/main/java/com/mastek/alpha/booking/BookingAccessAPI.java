@@ -9,14 +9,15 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.xml.bind.annotation.XmlRootElement;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.mastek.alpha.train.Booking;
 
 @Component
 @Path("/booking/")
+@XmlRootElement
 public class BookingAccessAPI {
 	
 	BookingJPARepository repository;
@@ -36,7 +37,7 @@ public class BookingAccessAPI {
 	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
 	public Iterable<Booking> listBookings(){
 		return getRepository().findAll();
-		}
+	}
 	
 	@POST
 	@Path("/register")
@@ -50,8 +51,8 @@ public class BookingAccessAPI {
 	@DELETE
 	@Path("/delete")
 	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
-	public Booking deleteBooking(int trainTicketId) {
-		Booking deleteBooking = getRepository().findById(trainTicketId).get();
+	public Booking deleteBooking(int bookingTicketId) {
+		Booking deleteBooking = getRepository().findById(bookingTicketId).get();
 		System.out.println(deleteBooking);
 		getRepository().delete(deleteBooking);
 		return deleteBooking;

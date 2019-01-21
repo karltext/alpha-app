@@ -6,12 +6,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.ws.rs.FormParam;
 
 @Entity
 @Table(name="Booking_ENTITY_TABLE")
 public class Booking {
 	
 	int bookingId;
+	@FormParam("bookingType")
 	String bookingType;
 	
 	@Id
