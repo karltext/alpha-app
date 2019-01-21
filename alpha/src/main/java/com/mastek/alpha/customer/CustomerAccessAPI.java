@@ -39,10 +39,4 @@ public class CustomerAccessAPI {
 		getRepository().save(newCustomer);
 		return newCustomer;
 	}
-	
-	
-	
-	
-	
-
 }
