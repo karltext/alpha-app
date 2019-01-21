@@ -1,4 +1,4 @@
-package com.mastek.alpha;
+package com.mastek.alpha.account;
 
 import javax.ws.rs.BeanParam;
 import javax.ws.rs.Consumes;

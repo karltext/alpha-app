@@ -1,4 +1,4 @@
-package com.mastek.alpha;
+package com.mastek.alpha.account;
 
 import org.springframework.data.repository.CrudRepository;
 
