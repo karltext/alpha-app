@@ -1,4 +1,4 @@
-package com.mastek.alpha;
+package com.mastek.alpha.train;
 
 import javax.ws.rs.BeanParam;
 import javax.ws.rs.Consumes;

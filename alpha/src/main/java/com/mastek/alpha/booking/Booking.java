@@ -1,4 +1,4 @@
-package com.mastek.alpha;
+package com.mastek.alpha.booking;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

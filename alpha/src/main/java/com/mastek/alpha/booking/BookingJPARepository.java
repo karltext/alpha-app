@@ -1,4 +1,4 @@
-package com.mastek.alpha;
+package com.mastek.alpha.booking;
 
 import org.springframework.data.repository.CrudRepository;
 
