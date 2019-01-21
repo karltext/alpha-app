@@ -1,4 +1,4 @@
-package com.mastek.alpha;
+package com.mastek.alpha.flight;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

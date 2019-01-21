@@ -1,4 +1,4 @@
-package com.mastek.alpha;
+package com.mastek.alpha.flight;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
