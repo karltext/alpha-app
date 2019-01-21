@@ -13,6 +13,8 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.mastek.alpha.train.Booking;
+
 @Component
 @Path("/booking/")
 public class BookingAccessAPI {
@@ -29,16 +31,16 @@ public class BookingAccessAPI {
 	}
 
 	
-	@GET
 	@Path("/list")
-	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-	public Iterable<Booking> listBookings() {
+	@GET
+	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+	public Iterable<Booking> listBookings(){
 		return getRepository().findAll();
-	}
+		}
 	
 	@POST
-	@Path("/new")
-	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+	@Path("/register")
+	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
 	@Consumes({MediaType.APPLICATION_FORM_URLENCODED})
 	public Booking addBooking(@BeanParam Booking newBooking) {
 		getRepository().save(newBooking);
@@ -46,12 +48,13 @@ public class BookingAccessAPI {
 	}
 	
 	@DELETE
-	@Path("/delete/{pid}")
-	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-	public Booking deleteBooking(@PathParam("pid") int productId) {
-		Booking delBooking = getRepository().findById(productId).get();
-		getRepository().delete(delBooking);
-		return delBooking;
+	@Path("/delete")
+	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+	public Booking deleteBooking(int trainTicketId) {
+		Booking deleteBooking = getRepository().findById(trainTicketId).get();
+		System.out.println(deleteBooking);
+		getRepository().delete(deleteBooking);
+		return deleteBooking;
 	}
 
 }
