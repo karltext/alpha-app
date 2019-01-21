@@ -5,14 +5,22 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.ws.rs.FormParam;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name="Account_ENTITY_TABLE")
+@XmlRootElement
 public class Account {
-
+	
+	@FormParam("accountNumber")
 	int accountNumber; 
+	@FormParam("accountType")
 	String accountType;
+	@FormParam("bonuspoints")
 	double bonuspoints;
+	
+	
 	
 	@Id 
 	@GeneratedValue(strategy=GenerationType.IDENTITY) 
