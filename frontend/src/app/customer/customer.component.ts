@@ -16,6 +16,7 @@ export class CustomerComponent implements OnInit {
    }
 
    addCustomer(newCustomer:Customer){
+     console.log("adding customer")
      this.customerService.addCustomer(newCustomer).subscribe(
        res=>{
          this.customerService.getCustomer().subscribe(

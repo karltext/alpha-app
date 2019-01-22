@@ -14,9 +14,9 @@
   </tr>
 </table>
 
-<form (submit)="assCustomer({customerId:0,name:name.value})">
+<form (submit)="addCustomer({customerId:0,name:name.value})">
   <tr>
     <td><input placeholder="Name" #name></td>
-    <td><input type="submit" value="Add"></td>
+    <td><button type="submit">submit</button></td>
   </tr>
 </form>
