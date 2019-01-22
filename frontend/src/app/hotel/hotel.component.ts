@@ -14,7 +14,7 @@ export class HotelComponent implements OnInit {
     this.hotels=[]
     }
 
-  addNewTraining(newHotel:Hotel){
+  addNewHotel(newHotel:Hotel){
     this.hotelService.addNewHotel(newHotel).subscribe(
       res => {this.hotelService.getHotels().subscribe(
         res => {this.hotels=res}
