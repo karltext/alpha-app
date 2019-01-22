@@ -37,7 +37,7 @@ b. synchronize the project and have one working demo as team for Spring Boot Ser
 
 * ben  - flight
 * Karl - booking
-* scott - account
+* scott - customer
 * joe - hotel
 * will - train
-* luke - customer
+* luke - account
