@@ -31,9 +31,6 @@ public class Hotel {
 	@FormParam("price")
 	double price;
 	
-	//@FormParam("totalPrice")
-	//double totalPrice;
-	
 	@FormParam("location")
 	String location;
 	@FormParam("duration")
@@ -77,7 +74,6 @@ public class Hotel {
 	public void setLateCheckout(boolean lateCheckout) {
 		this.lateCheckout = lateCheckout;
 	}
-	
 	
 	@Override
 	public String toString() {

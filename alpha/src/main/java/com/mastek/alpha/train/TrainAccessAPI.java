@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-@Path("/train/")
+@Path("/trains/")
 public class TrainAccessAPI {
 	
 	TrainJPARepository trainRepository;

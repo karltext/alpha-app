@@ -13,24 +13,22 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Account {
 	
-	@FormParam("accountNumber")
 	int accountNumber; 
+	
 	@FormParam("accountType")
 	String accountType;
 	@FormParam("bonuspoints")
 	double bonuspoints;
-	
-	
 	
 	@Id 
 	@GeneratedValue(strategy=GenerationType.IDENTITY) 
 	public int getAccountNumber() {
 		return accountNumber;
 	}
-	
 	public void setAccountNumber(int accountNumber) {
 		this.accountNumber = accountNumber;
 	}
+	
 	public String getAccountType() {
 		return accountType;
 	}
@@ -43,12 +41,11 @@ public class Account {
 	public void setBonuspoints(double bonuspoints) {
 		this.bonuspoints = bonuspoints;
 	}
+	
 	@Override
 	public String toString() {
 		return "Account [accountNumber=" + accountNumber + ", accountType=" + accountType + ", bonuspoints="
 				+ bonuspoints + "]";
 	}
-	
-	
 	
 }

@@ -13,15 +13,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name="Customer_ENTITY_TABLE")
 @XmlRootElement
 public class Customer {
-	@FormParam("customerId")
+	
 	int customerId;
+	
 	@FormParam("name")
 	String name;
 	
-	@Override
-	public String toString() {
-		return "Customer [customerId=" + customerId + ", name=" + name + "]";
-	}
 	@Id 
 	@Column(name="customerId") 
 	@GeneratedValue(strategy=GenerationType.IDENTITY) 
@@ -31,6 +28,7 @@ public class Customer {
 	public void setCustomerId(int customerId) {
 		this.customerId = customerId;
 	}
+	
 	public String getName() {
 		return name;
 	}
@@ -38,4 +36,8 @@ public class Customer {
 		this.name = name;
 	}
 
+	@Override
+	public String toString() {
+		return "Customer [customerId=" + customerId + ", name=" + name + "]";
+	}
 }

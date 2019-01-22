@@ -6,11 +6,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.ws.rs.FormParam;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name="FLIGHT_ENTITY_TABLE")
+@XmlRootElement
 public class Flight {
 	
+	@FormParam("flightNumber")
 	int flightNumber;
 	
 	@FormParam("departureTime")
