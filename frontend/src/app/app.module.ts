@@ -9,6 +9,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { FlightComponent } from './flight/flight.component';
 import { TrainComponent } from './train/train.component';
 import { HotelComponent } from './hotel/hotel.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HotelComponent } from './hotel/hotel.component';
     CustomerComponent,
     FlightComponent,
     TrainComponent,
-    HotelComponent
+    HotelComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
