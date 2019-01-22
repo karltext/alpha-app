@@ -31,3 +31,13 @@
 Account,Customer,Booking, Flight, Hotel, Train 
 a. add an Entity, DAO Repository and Access API
 b. synchronize the project and have one working demo as team for Spring Boot Service
+
+
+## Day 2: Angular roles
+
+ben  - flight
+Karl - booking
+scott - account
+joe - hotel
+will - train
+luke - customer
