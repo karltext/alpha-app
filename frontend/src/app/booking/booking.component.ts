@@ -22,7 +22,7 @@ export class BookingComponent implements OnInit {
       .subscribe(res => { this.bookings = res })
   }
 
-  regitsterBooking(bookingType: string) {
+  registerBooking(bookingType: string) {
     console.log(bookingType, "ran")
     this.bookingService.registerBooking(bookingType)
       .subscribe(res => {
