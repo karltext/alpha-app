@@ -35,9 +35,9 @@ b. synchronize the project and have one working demo as team for Spring Boot Ser
 
 ## Day 2: Angular roles
 
-ben  - flight
-Karl - booking
-scott - account
-joe - hotel
-will - train
-luke - customer
+* ben  - flight
+* Karl - booking
+* scott - account
+* joe - hotel
+* will - train
+* luke - customer
