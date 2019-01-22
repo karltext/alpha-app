@@ -1,26 +1,20 @@
 <h1>Account Page</h1>
 <table>
-<tr>
-<th>Account number</th>
-<th>Account type</th>
-<th>bonusPoints</th>
-</tr>
-<tr *ngFor="let ac of accounts; let i=index">
-<td>{{ac.accountNumber}}</td>
-<td>{{ac.accountType}}</td>
-<td>{{ac.bonuspoints}}</td>
-<td><button (click)="deleteAccount(ac.accountNumber)">x</button></td>
-</tr>
+    <tr>
+        <th>Account number</th>
+        <th>Account type</th>
+        <th>bonusPoints</th>
+    </tr>
+    <tr *ngFor="let ac of accounts; let i=index">
+        <td>{{ac.accountNumber}}</td>
+        <td>{{ac.accountType}}</td>
+        <td>{{ac.bonuspoints}}</td>
+        <td><button (click)="deleteAccount(ac.accountNumber)">x</button></td>
+    </tr>
 </table>
-<form (submit)=
-"addNewAccount({accountNumber:0,accountType:type.value,bonuspoints:points.value})">
-<tr>
-<td><input placeholder="Account Type" #type></td>
-<td><input placeholder="Bonus Points" #points></td>
-<td><button type="submit" value="Add"></td>
-</tr>
 
-
-
-
+<form (submit)="addNewAccount({accountNumber:0,accountType:type.value,bonuspoints:points.value})">
+    <input placeholder="Account Type" #type><br>
+    <input placeholder="Bonus Points" #points><br>
+    <button type="submit">Submit</button><br>
 </form>
