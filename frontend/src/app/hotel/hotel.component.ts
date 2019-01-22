@@ -10,9 +10,9 @@ import { Hotel } from '../hotel';
 export class HotelComponent implements OnInit {
   hotels:Hotel[]
 
-  constructor(private hotelService:HotelService) {
+  constructor(private hotelService: HotelService) {
     this.hotels=[]
-    }
+  }
 
   addNewHotel(newHotel:Hotel){
     this.hotelService.addNewHotel(newHotel).subscribe(
