@@ -3,20 +3,16 @@ package com.mastek.alpha.flight;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.Set;
 
-import javax.transaction.Transactional;
 import javax.ws.rs.BeanParam;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
-import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import org.springframework.stereotype.Component;
 
 @Component
 @Path("/flights/")
@@ -28,6 +24,7 @@ public class FlightAccessAPI {
 		return repository;
 	}
 
+	@Autowired
 	public void setRepository(FlightJPARepository repository) {
 		this.repository = repository;
 	}
@@ -36,9 +33,8 @@ public class FlightAccessAPI {
 		this.repository = repository;
 	}
 	
-	// http://localhost:9900/employees/list
-	@Path("/list")
 	@GET
+	@Path("/list")
 	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
 	public Iterable<Flight> listFlights(){
 		return getRepository().findAll();
@@ -61,8 +57,4 @@ public class FlightAccessAPI {
 		getRepository().delete(deleteFlight);
 		return deleteFlight;
 	}
-
-	
-	
-
 }

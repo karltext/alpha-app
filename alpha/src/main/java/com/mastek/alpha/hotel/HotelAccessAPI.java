@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 import javax.ws.rs.core.MediaType;
 
 @Component
-@Path("/hotel/")
+@Path("/hotels/")
 public class HotelAccessAPI {
 
 	HotelJPARepository hotelRepository;

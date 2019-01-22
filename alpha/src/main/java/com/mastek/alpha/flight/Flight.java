@@ -1,21 +1,35 @@
 package com.mastek.alpha.flight;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.ws.rs.FormParam;
 
 @Entity
 @Table(name="FLIGHT_ENTITY_TABLE")
 public class Flight {
 	
 	int flightNumber;
+	
+	@FormParam("departureTime")
 	String departureTime;
-	double length_hours;
+	
+	@FormParam("length")
+	double length;
+	
+	@FormParam("company")
 	String company;
+	
+	@FormParam("origin")
 	String origin;
+	
+	@FormParam("destination")
 	String destination;
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY) 
 	public int getFlightNumber() {
 		return flightNumber;
 	}
@@ -28,11 +42,11 @@ public class Flight {
 	public void setDepartureTime(String departureTime) {
 		this.departureTime = departureTime;
 	}
-	public double getLength_hours() {
-		return length_hours;
+	public double getLength() {
+		return length;
 	}
-	public void setLength_hours(double length_hours) {
-		this.length_hours = length_hours;
+	public void setLength(double length) {
+		this.length = length;
 	}
 	public String getCompany() {
 		return company;
@@ -52,7 +66,5 @@ public class Flight {
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-	
-	
 
 }
