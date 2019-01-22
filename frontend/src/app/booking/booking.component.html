@@ -1,3 +1,13 @@
-<p>
-  booking works!
-</p>
+<div class="bookings-list-container">
+  <h3>Bookings</h3>
+  <p *ngIf="!bookings">No bookings to available!</p>
+  <div *ngFor="let b of bookings" class="bookings">
+    <div class="booking-item">Id: {{b.bookingId}}; type: {{b.bookingType}}</div>
+  </div>
+</div>
+<div class="new-booking-container">
+  <h3>New Booking</h3>
+  <label>Booking Type</label><br>
+  <input type=text/><br>
+  <button>Submit</button>
+</div>
