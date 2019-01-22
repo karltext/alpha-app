@@ -17,7 +17,7 @@ export class TrainService {
     return this.httpsvc.get<Train[]>(this.rootURL+"/list")
   }
 
-  addNewTrain(newTrain:Train): Observable<Train> {
+  addNewTrains(newTrain:Train): Observable<Train> {
     const httpOpts = {
       headers: new HttpHeaders(
         {'Content-Type':
