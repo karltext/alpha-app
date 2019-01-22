@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HotelService } from '../hotel.service';
+import { Hotel } from '../hotel';
 
 @Component({
   selector: 'app-hotel',
@@ -6,10 +8,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hotel.component.scss']
 })
 export class HotelComponent implements OnInit {
+  hotels:Hotel[]
 
-  constructor() { }
+  constructor(private hotelService: HotelService) {
+    this.hotels=[]
+  }
+
+  addNewHotel(newHotel:Hotel){
+    this.hotelService.addNewHotel(newHotel).subscribe(
+      res => {this.hotelService.getHotels().subscribe(
+        res => {this.hotels=res}
+      )}
+    )
+  }
 
   ngOnInit() {
+    this.hotelService.getHotels().subscribe(
+      res=> {this.hotels=res}
+    )
   }
 
 }
