@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Train } from '../train';
+import { TrainService } from '../train.service';
 
 @Component({
   selector: 'app-train',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrainComponent implements OnInit {
 
-  constructor() { }
+  Trains:Train[]
+
+  constructor(private tService:TrainService) {
+    this.Trains=[]
+   }
+
+   addNewTrain(newTrain:Train){
+     this.tService.addNewTrains(newTrain).subscribe(
+       res=>{
+         this.tService.getTrains().subscribe(
+           res=>{this.Trains= res}
+         )
+       }
+     )
+   }
 
   ngOnInit() {
+    this.tService.getTrains().subscribe(
+      res =>{ this.Trains= res}
+    )
+  
   }
+
 
 }
