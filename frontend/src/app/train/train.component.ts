@@ -16,7 +16,7 @@ export class TrainComponent implements OnInit {
    }
 
    addNewTrain(newTrain:Train){
-     this.tService.addNewTrains(newTrain).subscribe(
+     this.tService.addNewTrain(newTrain).subscribe(
        res=>{
          this.tService.getTrains().subscribe(
            res=>{this.Trains= res}
