@@ -8,13 +8,13 @@
     <th>Customer Name</th>
   </tr>
 
-  <tr *ngFor="let cu of Customer; let i = index">
+  <tr *ngFor="let cu of customer; let i = index">
     <td>{{cu.customerId}}</td>
     <td>{{cu.name}}</td>
   </tr>
 </table>
 
-<form (submit)="assCustomer({customerId:0,name:name.value})">
+<form (submit)="addCustomer({customerId:0,name:name.value})">
   <tr>
     <td><input placeholder="Name" #name></td>
     <td><input type="submit" value="Add"></td>
