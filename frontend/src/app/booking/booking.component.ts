@@ -21,4 +21,13 @@ export class BookingComponent implements OnInit {
     this.bookingService.listBookings()
       .subscribe(res => { this.bookings = res })
   }
+
+  registerBooking(bookingType: string) {
+    console.log(bookingType, "ran")
+    this.bookingService.registerBooking(bookingType)
+      .subscribe(res => {
+        console.log(res)
+        this.listBookings()
+      })
+  }
 }

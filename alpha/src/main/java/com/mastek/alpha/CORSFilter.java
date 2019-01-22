@@ -9,18 +9,18 @@ import javax.ws.rs.ext.Provider;
 
 import org.springframework.stereotype.Component;
 
-@Provider 
+@Provider
 @Component 
 public class CORSFilter implements ContainerResponseFilter {
 
-	@Override
-	public void filter(ContainerRequestContext requestContext, 
-						ContainerResponseContext responseContext) throws IOException {
-		responseContext.getHeaders().add(
-				"Access-Control-Allow-Origin", "*");
-		responseContext.getHeaders().add(
-				"Access-Control-Allow-Headers", "X-Requested-With,Origin, Content-Type, Accept");
-		responseContext.getHeaders().add(
-				"Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-	}
+    @Override
+    public void filter(ContainerRequestContext request,
+            ContainerResponseContext response) throws IOException {
+        response.getHeaders().add("Access-Control-Allow-Origin", "*");
+        response.getHeaders().add("Access-Control-Allow-Headers",
+                "origin, content-type, accept, authorization");
+        response.getHeaders().add("Access-Control-Allow-Credentials", "true");
+        response.getHeaders().add("Access-Control-Allow-Methods",
+                "GET, POST, PUT, DELETE, OPTIONS, HEAD");
+    }
 }
