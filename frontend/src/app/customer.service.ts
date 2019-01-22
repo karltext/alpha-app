@@ -10,7 +10,7 @@ export class CustomerService {
 
   rootURL:string
   constructor(private httpsvc:HttpClient) { 
-    this.rootURL="http://localhost:9900/customer"
+    this.rootURL="http://localhost:9900/customers"
   }
 
   getCustomer():Observable<Customer[]>{

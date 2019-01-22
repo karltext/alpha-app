@@ -22,6 +22,7 @@ import { HomeComponent } from './home/home.component';
     TrainComponent,
     HotelComponent,
     HomeComponent
+    
   ],
   imports: [
     BrowserModule,
